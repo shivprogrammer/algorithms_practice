@@ -13,9 +13,9 @@ function runLength(string) {
   for (var i = 0; i < string.length; i++){
     if(string[i] === string[i+1]){
     counter++;
-    output.push(counter + string[i]);
-    }
-    if(string[i] !== string[i+1])
+  }
+  output.push(counter + string[i]);
+  }
     counter = 1;
   }
   return output.join('');
@@ -23,6 +23,9 @@ function runLength(string) {
 
 // O(N) time complexity
 // O(N) space complexity for output variable and then an additional one for the variable for the counter as well.
+
+
+// make sure to redo with string and concatonation and
 
 runLength('aabbcccddbb'); // expect 2a2b3c2d2b
 runLength('abcabc'); // expect 1a1b1c1a1b1c
