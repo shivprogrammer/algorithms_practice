@@ -4,7 +4,7 @@
 
 function twoSum(nums, target) {
   var result = [];
-  for(var i = 0; i < nums.length; i++) {
+  for (var i = 0; i < nums.length; i++) {
     for (var j = 0; j < nums.length; j++) {
       if ((i != j) && (nums[i] + nums[j] === target)) {
         result.push(i, j);
@@ -13,3 +13,5 @@ function twoSum(nums, target) {
     }
   }
 }
+
+console.log(twoSum([2, 1, 8, 10], 18)); // expect [2, 3];
