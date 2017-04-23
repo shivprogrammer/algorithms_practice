@@ -25,7 +25,7 @@ function addNums(a1, a2) {
   num1 = parseInt(list1.join(''));
   num2 = parseInt(list2.join(''));
   res = num1 + num2;
-  var resSplit = res.toString().split('');
+  resSplit = res.toString().split('');
   for(var z = resSplit.length; z > 0; z--) {
     resArray.push(parseInt(resSplit.pop()));
   }
