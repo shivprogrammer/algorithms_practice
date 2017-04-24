@@ -13,9 +13,10 @@ Stack.prototype.maxInt() {
   return maxStack.peek();
 }
 
-stack1.prototype.pop() {
-  if (maxStack.pop() === stack1.pop()) {
+Stack.prototype.pop() {
+  if (maxStack.peek() === stack1.peek()) {
     maxStack.pop();
+    stack1.pop();
   }
   else {
     stack1.pop();
@@ -25,6 +26,7 @@ stack1.prototype.pop() {
 Stack.prototype.push(val) {
   if (maxStack.isEmpty()) {
     maxStack.push(val);
+    stack1.push(val);
   }
   if (maxStack.peek() <= val) {
     maxStack.push(val);
