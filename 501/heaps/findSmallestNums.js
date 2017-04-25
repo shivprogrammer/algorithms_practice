@@ -1,3 +1,5 @@
+'use strict';
+
 /*
 You're given an array of a thousand elements
 You would like to find the smallest 1000 elements

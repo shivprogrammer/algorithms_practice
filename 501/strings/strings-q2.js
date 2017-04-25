@@ -1,3 +1,5 @@
+'use strict';
+
 // Strings Q2: Implement run length encoding
 
 // <input> => output

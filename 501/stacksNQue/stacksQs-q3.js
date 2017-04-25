@@ -1,3 +1,5 @@
+'use strict';
+
 // HW2: Stacks and Queue Q3: Stack with Max API
 // Have an api method in your stack class that returns the Max Integer Value in it.
 

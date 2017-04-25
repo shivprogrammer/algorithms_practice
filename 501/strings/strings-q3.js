@@ -1,3 +1,5 @@
+'use strict';
+
 // HW2: Strings Q3: Test Palindromicity for string
 //
 // Given,

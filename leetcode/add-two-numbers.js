@@ -1,3 +1,5 @@
+'use strict';
+
 // 2 non empty linked lists
 // stored in reverse order
 // a1 = [2, 4, 3] and a2 = [7, 0, 3]

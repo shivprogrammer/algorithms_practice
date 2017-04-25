@@ -1,3 +1,5 @@
+'use strict';
+
 // Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
 
 // The key here is to use lastIndexOf, because it actually searches through a string to find a value.

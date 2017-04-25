@@ -1,3 +1,5 @@
+'use strict';
+
 // find the common points of two sorted arrays
 
 function intersection(arr1, arr2) {

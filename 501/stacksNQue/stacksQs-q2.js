@@ -1,3 +1,5 @@
+'use strict';
+
 // WELL FORMED PARANTHESIS
 
 // Given a string, write a program to examine whether the pairs and the orders of parentheses are well-formed balanced:
