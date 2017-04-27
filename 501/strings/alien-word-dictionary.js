@@ -50,14 +50,23 @@ function alienDic(arr) {
     }
   }
 
-  for (var a = 0; )
   result += secondary;
   result += third;
+  var output;
+
+  for (var a = 0; a < result.length; a++) {
+    for (var b = 0; b < third.length; b++) {
+      if (result[a] === third[b]) {
+        output = [result.slice(0, result[a] - 1), third[b] - 1, result.slice(result[a] - 1)].join('');
+      }
+    }
+  }
 
   // console.log(matches);
   console.log(secondary);
   console.log(third);
   console.log(result);
+  console.log(output);
 }
 
 console.log(alienDic(sample));
