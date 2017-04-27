@@ -7,6 +7,7 @@
 // Output: Order of characters is 'b', 'd', 'a', 'c'
 
 var sample = ['xza', 'ayh', 'ples', 'plares', 'bhaaz', 'bnc'];
+var words = ['baa', 'abcd', 'abca', 'cab', 'cad'];
 
 function unique(str) {
   var result = '';
@@ -18,23 +19,17 @@ function unique(str) {
   return result;
 }
 
-// function alienDic(arr) {
-//   var matches = [];
-//   var result = '';
-//   for (var i = 0; i < arr.length; i++) {
-//     result += arr[i][0];
-//   }
-//   return unique(result);
-// }
-
 function alienDic(arr) {
   var matches = '';
   var secondary = '';
-  var result = '';
+  var first = '';
   var third = '';
+  var output = '';
+
   for (var i = 0; i < arr.length; i++) {
-    result += arr[i][0];
+    first += arr[i][0];
   }
+
   for(var x = 0; x < arr.length; x++) {
     for (var j = 0; j < arr.length; j++) {
       if ((x != j) && (arr[x][0] === arr[j][0])) {
@@ -50,23 +45,45 @@ function alienDic(arr) {
     }
   }
 
-  result += secondary;
-  result += third;
-  var output;
+  output += first;
 
-  for (var a = 0; a < result.length; a++) {
-    for (var b = 0; b < third.length; b++) {
-      if (result[a] === third[b]) {
-        output = [result.slice(0, result[a] - 1), third[b] - 1, result.slice(result[a] - 1)].join('');
+  if (secondary != '') {
+    for (var c = 0; c < first.length; c++) {
+      for (var d = 0; d < secondary.length; d++) {
+        if (first[c] === secondary[d]) {
+          output = [first.slice(0, c), secondary[d - 1], first.slice(d)].join('');
+        }
       }
     }
   }
 
-  // console.log(matches);
+  if (third != '') {
+    for (var a = 0; a < first.length; a++) {
+      for (var b = 0; b < third.length; b++) {
+        if (first[a] === third[b]) {
+          output = [first.slice(0, a), third[b - 1], first.slice(b)].join('');
+          third = '';
+        }
+      }
+    }
+  }
+
+  if (secondary != '') {
+    output += secondary;
+  }
+  if (third != '') {
+    output += third;
+  }
+
+  output += arr.join('');
+
+  console.log(matches);
   console.log(secondary);
   console.log(third);
-  console.log(result);
+  console.log(first);
   console.log(output);
+  return unique(output);
 }
 
 console.log(alienDic(sample));
+// console.log(alienDic(words));
