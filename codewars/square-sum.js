@@ -19,3 +19,15 @@ console.log(squareSum(array1)); // return 9;
 // What is the time complexity of map and reduce? And filter for that matter?
 // Assuming time complexity is O(N Squared) because you have to iterate over the array once, and then again to add up all of the previous pieces
 // Space complexity is O(1)
+
+function squareSum(numbers) {
+  return numbers.reduce(function(sum, n) {
+    return (n*n) + sum;
+  }, 0)
+}
+
+console.log(squareSum(array1)); // return 9;
+
+// **NOTICE: The map function is not even needed. That step is actually handled within the reduce itself.
+// Time complexity of this one is O(N)
+// Space complexity is O(1)
