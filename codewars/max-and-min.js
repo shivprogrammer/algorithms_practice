@@ -8,6 +8,8 @@
 
 var x = "1 9 3 4 -5";
 var y = "1 2 -3 4 5";
+var a = "1111 222 -124 "
+
 
 function highAndLow(nums) {
   var numbers = nums.split(' ');
@@ -17,17 +19,16 @@ function highAndLow(nums) {
   maxStack.push(numbers[0]);
 
   for (var i = 1; i < numbers.length; i++) {
-    if (numbers[i] > maxStack[maxStack.length - 1]) {
-      maxStack.push(numbers[i]);
+    if (parseInt(numbers[i]) > parseInt(maxStack[maxStack.length - 1])) {
+      maxStack.push(parseInt(numbers[i]));
     }
-    if (numbers[i] < minStack[minStack.length - 1]) {
-      minStack.push(numbers[i]);
+    if (parseInt(numbers[i]) < parseInt(minStack[minStack.length - 1])) {
+      minStack.push(parseInt(numbers[i]));
     }
   }
 
-  var output = maxStack[maxStack.length - 1] + ' ' + minStack[minStack.length -1];
-  return output.toString();
+  return maxStack[maxStack.length - 1] + ' ' + minStack[minStack.length -1];
 }
 
 console.log(highAndLow(x)); // return 9, -5
-console.log(highAndLow(y)); // return 5
+console.log(highAndLow(y)); // return 5 -3
