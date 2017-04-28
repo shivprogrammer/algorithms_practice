@@ -1,5 +1,4 @@
-// Instructions
-// Output
+'use strict';
 // In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
 // highAndLow("1 2 3 4 5"); // return "5 1"
 // Example:
@@ -32,3 +31,7 @@ function highAndLow(nums) {
 
 console.log(highAndLow(x)); // return 9, -5
 console.log(highAndLow(y)); // return 5 -3
+
+// Time complexity is just O(N) because all elements are being looked through but just once.
+// Space can be improved though because it's quite a bit of space being take with two additional arrays created. O(N) space.
+// **NOTE impressive answer because Math.max and Math.min were not used.
