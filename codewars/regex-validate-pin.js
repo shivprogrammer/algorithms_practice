@@ -12,7 +12,10 @@ validatePIN("a234") === false
 */
 
 function validatePIN (pin) {
-  var nums = pin.match(/\d+/g).toString();
+  var nums = pin.match(/\d/g);
+
+  console.log('pin:', pin, '| length ===', pin.length);
+  console.log('nums:', nums, '| length ===', nums.length);
 
   if((pin.length === 4 || pin.length === 6) && (nums.length === pin.length)) {
     return true;
@@ -22,8 +25,10 @@ function validatePIN (pin) {
   }
 }
 
-describe('Regex validatePIN function from code wars', function() {
-  describe('valid 4 int pin', function() {
+// Looks like there is a way for this to be done completely through regex, which makes sense. Very pleased with this though, I'm really learning and I even have legit tests!!!! Fuck yeah son.
+
+describe('Regex validatePIN function from code wars -------', function() {
+  describe('valid 4 int pin ===', function() {
     it('return true', done => {
       expect(validatePIN('1234')).to.equal(true);
       done();
@@ -44,9 +49,23 @@ describe('Regex validatePIN function from code wars', function() {
     })
   })
 
-  describe('valid 6 int pin', function() {
+  describe('valid 6 int pin ===', function() {
     it('return true', done => {
       expect(validatePIN('123456')).to.equal(true);
+      done();
+    })
+  })
+
+  describe('invalid -- 6 characters but contains letter', function() {
+    it('return false', done => {
+      expect(validatePIN('5F7410')).to.equal(false);
+      done();
+    })
+  })
+
+  describe('invalid -- 4 characters but contains letter', function() {
+    it('return false', done => {
+      expect(validatePIN('4s62')).to.equal(false);
       done();
     })
   })
