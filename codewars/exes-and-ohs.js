@@ -19,10 +19,10 @@ function XO(str) {
   var o = 0;
 
   for(let i = 0; i < str.length; i++) {
-    if (lower[i].toLowerCase() === 'x') {
+    if (str[i].toLowerCase() === 'x') {
       x++;
     }
-    if (lower[i].toLowerCase() === 'o') {
+    if (str[i].toLowerCase() === 'o') {
       o++;
     }
   }
