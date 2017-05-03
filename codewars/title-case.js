@@ -23,39 +23,52 @@ titleCase('the quick brown fox') // should return: 'The Quick Brown Fox'
 */
 
 function titleCase(title, minorWords) {
+  var result = '';
+  var joined = [title]
+  var minJoin = [minorWords]
 
+  for (let i = 0; i < joined.length; i ++) {
+    for (let j = 0; j < minJoin[j]; j++) {
+      if (joined[i] === minJoin[j]) {
+        result += joined[i].toLowerCase()
+      }
+      else {
+        result += joined[i][0].toUpperCase()
+        result += joined[i][1, joined[i].length -1].toLowerCase()
+      }
+    }
+  }
+  return result;
 }
 
-describe('Title Case Question from Code Wars', function() {
-  describe('Input: Empty String', function() {
-    it('Expected: Empty String', done => {
-      expect(titleCase('')).to.equal('');
-      done();
-    })
-  })
-  Test.assertEquals(titleCase(''), '')
+console.log(titleCase('a clash of KINGS', 'a an the of'))
 
-  describe('Input:', function() {
-    it('Expected:', done => {
-      expect(titleCase()).to.equal();
-      done();
-    })
-  })
-  Test.assertEquals(titleCase('a clash of KINGS', 'a an the of'), 'A Clash of Kings')
-
-  describe('Input:', function() {
-    it('Expected:', done => {
-      expect(titleCase()).to.equal();
-      done();
-    })
-  })
-  Test.assertEquals(titleCase('THE WIND IN THE WILLOWS', 'The In'), 'The Wind in the Willows')
-
-  describe('Input:', function() {
-    it('Expected:', done => {
-      expect(titleCase()).to.equal();
-      done();
-    })
-  })
-  Test.assertEquals(titleCase('the quick brown fox'), 'The Quick Brown Fox')
-})
+// describe('Title Case Question from Code Wars', function() {
+//   describe('Input: Empty String', function() {
+//     it('Expected: Empty String', done => {
+//       expect(titleCase('')).to.equal('');
+//       done();
+//     })
+//   })
+//
+//   describe('Input: a clash of KINGS, a an the of', function() {
+//     it('Expected: A Clash of Kings', done => {
+//       expect(titleCase('a clash of KINGS', 'a an the of')).to.equal('A Clash of Kings');
+//       done();
+//     })
+//   })
+//
+//   describe('Input: THE WIND IN THE WILLOWS, The In', function() {
+//     it('Expected: The Wind in the Willows', done => {
+//       expect(titleCase('THE WIND IN THE WILLOWS', 'The In')).to.equal('The Wind in the Willows');
+//       done();
+//     })
+//   })
+//
+//   describe('Input: the quick brown fox', function() {
+//     it('Expected: The Quick Brown Fox', done => {
+//       expect(titleCase('the quick brown fox')).to.equal('The Quick Brown Fox');
+//       done();
+//     })
+//   })
+// })
