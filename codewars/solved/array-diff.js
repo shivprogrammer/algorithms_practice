@@ -1,5 +1,7 @@
 'use strict';
 
+const expect = require('chai').expect
+
 // Your goal in this kata is to implement an difference function, which subtracts one list from another.
 // It should remove all values from list a, which are present in list b.
 // difference([1,2],[1]) == [2]
@@ -12,7 +14,11 @@ function array_diff(a, b) {
   })
 }
 
-var array1 = [1, 2, 2, 4, 4, 3, 5, 6];
-var array2 = [3, 5];
-
-console.log(arrayDiff(array1, array2)); // return [1, 2, 2, 4, 4, 6];
+describe('Array Diff Question from Code Wars', function() {
+  describe('Input: [1, 2, 2, 4, 4, 3, 5, 6], [3, 5]', function() {
+    it('Expected: [1, 2, 2, 4, 4, 6]', done => {
+      expect(array_diff([1, 2, 2, 4, 4, 3, 5, 6], [3, 5])).to.deep.equal([1, 2, 2, 4, 4, 6]);
+      done();
+    })
+  })
+})
