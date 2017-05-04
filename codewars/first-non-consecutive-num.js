@@ -12,7 +12,6 @@ The array will always have at least 2 elements and all the elements will be numb
 */
 
 function firstNonConsecutive(arr) {
-  // if (arr === []) {}
   for (let i = 1; i < arr.length; i++) {
     if (arr[i] != arr[i - 1] + 1) {
       return arr[i];
