@@ -19,10 +19,12 @@ It happens that there are several possible (a, b). The function returns an empty
 
 function removeNb (n) {
   var additions = ((n * n + n)/2)
+  // var lowLimit = ((n - 1) * n / 2) / (n + 1);
+  // var highLimit = Math.sqrt(additions + 1) - 1;
   var output = []
 
-  for (let j = n; j >= n * 0.65; j--) {
-    for (let k = n - 1; k >= n ; k--) {
+  for (let j = n; j >= Math.floor(n * 0.6); j--) {
+    for (let k = n - 1; k >= Math.floor(n * 0.6) ; k--) {
       if ((additions - j - k) === (j * k)) {
         output.push([k, j]);
       }
