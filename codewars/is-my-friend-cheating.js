@@ -17,17 +17,31 @@ with all (a, b) which are the possible removed numbers in the sequence 1 to n.
 It happens that there are several possible (a, b). The function returns an empty array if no possible numbers are found which will prove that my friend has not told the truth! (Go: in this case return nil).
 */
 
+// function removeNb (n) {
+//   var additions = ((n * n + n)/2)
+//   var output = []
+//
+//   for (let j = n; j >= Math.floor(n * 0.6); j--) {
+//     for (let k = n - 1; k >= Math.floor(n * 0.6) ; k--) {
+//       if ((additions - j - k) === (j * k)) {
+//         output.push([k, j]);
+//       }
+//     }
+//   }
+//   return output;
+// }
+
 function removeNb (n) {
   var additions = ((n * n + n)/2)
-  // var lowLimit = ((n - 1) * n / 2) / (n + 1);
-  // var highLimit = Math.sqrt(additions + 1) - 1;
+  var lowLimit = ((n - 1) * n / 2) / (n + 1);
+  var highLimit = Math.floor(Math.sqrt(additions + 1) - 1);
   var output = []
 
-  for (let j = n; j >= Math.floor(n * 0.6); j--) {
-    for (let k = n - 1; k >= Math.floor(n * 0.6) ; k--) {
-      if ((additions - j - k) === (j * k)) {
-        output.push([k, j]);
-      }
+  for (let i = highLimit; i >= lowLimit; i--) {
+    var x = Math.floor((additions - i)/(i + 1));
+    if ((i * x + i + x) === additions) {
+        output.push([i, x]);
+        output.push([x, i]);
     }
   }
   return output;
