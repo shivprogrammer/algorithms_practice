@@ -49,4 +49,11 @@ describe('Get Middle Character Code Wars', function() {
       done();
     })
   })
+
+  describe('Input: A', function() {
+    it('Expected: A', done => {
+      expect(getMiddle('A')).to.equal('A');
+      done();
+    })
+  })
 })
