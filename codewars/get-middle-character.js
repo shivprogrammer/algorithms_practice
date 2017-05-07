@@ -1,9 +1,12 @@
 'use strict';
 
-const expect = require('chai').expect
+const expect = require('chai').expect;
 
 /*
+7 kyu
+
 You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+
 #Examples:
 Kata.getMiddle("test") should return "es"
 Kata.getMiddle("testing") should return "t"
@@ -22,19 +25,27 @@ function getMiddle(s) {
   return s[s.length / 2 - 1] + s[s.length / 2]
 }
 
-// Time Complexity 0(1), Space Complexity 0(1)
+// Time Complexity: O(1)
+// Space Complexity: O(1)
 
-describe('get middle character question from code wars', function() {
-  describe('even string -- input: test', function() {
+describe('Get Middle Character Code Wars', function() {
+  describe('Input: test', function() {
     it('Expected: es', done => {
       expect(getMiddle('test')).to.equal('es');
       done();
     })
   })
 
-  describe('odd string -- input: testing', function() {
+  describe('Input: testing', function() {
     it('Expected: t', done => {
       expect(getMiddle('testing')).to.equal('t');
+      done();
+    })
+  })
+
+  describe('Input: middle', function() {
+    it('Expected: dd', done => {
+      expect(getMiddle('middle')).to.equal('dd');
       done();
     })
   })

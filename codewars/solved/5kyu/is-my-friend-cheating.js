@@ -3,6 +3,8 @@
 const expect = require('chai').expect
 
 /*
+5 kyu
+
 A friend of mine takes a sequence of numbers from 1 to n (where n > 0).
 Within that sequence, he chooses two numbers, a and b.
 He says that the product of a and b should be equal to the sum of all numbers in the sequence, excluding a and b.
@@ -16,20 +18,6 @@ with all (a, b) which are the possible removed numbers in the sequence 1 to n.
 
 It happens that there are several possible (a, b). The function returns an empty array if no possible numbers are found which will prove that my friend has not told the truth! (Go: in this case return nil).
 */
-
-// function removeNb (n) {
-//   var additions = ((n * n + n)/2)
-//   var output = []
-//
-//   for (let j = n; j >= Math.floor(n * 0.6); j--) {
-//     for (let k = n - 1; k >= Math.floor(n * 0.6) ; k--) {
-//       if ((additions - j - k) === (j * k)) {
-//         output.push([k, j]);
-//       }
-//     }
-//   }
-//   return output;
-// }
 
 function removeNb (n) {
   var additions = ((n * n + n)/2)
