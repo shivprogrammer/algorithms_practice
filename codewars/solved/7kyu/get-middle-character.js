@@ -24,7 +24,8 @@ function getMiddle(s) {
   return s[s.length / 2 - 1] + s[s.length / 2]
 }
 
-// Time Complexity 0(1), Space Complexity 0(1)
+// Time Complexity 0(1)
+// Space Complexity 0(1)
 
 describe('get middle character question from code wars', function() {
   describe('even string -- input: test', function() {
@@ -37,6 +38,20 @@ describe('get middle character question from code wars', function() {
   describe('odd string -- input: testing', function() {
     it('Expected: t', done => {
       expect(getMiddle('testing')).to.equal('t');
+      done();
+    })
+  })
+
+  describe('Input: middle', function() {
+    it('Expected: dd', done => {
+      expect(getMiddle('middle')).to.equal('dd');
+      done();
+    })
+  })
+
+  describe('Input: A', function() {
+    it('Expected: A', done => {
+      expect(getMiddle('A')).to.equal('A');
       done();
     })
   })
