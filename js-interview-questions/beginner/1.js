@@ -34,7 +34,3 @@ console.log(isPrime2(11)); // return false
 
 // This solution is more efficient but also quite interesting because the reason behind the usefulness of this goes to arithmetic and understanding the mathematics behind not need to searching all the way until the number itself.
 // Time complexity - O(sqrt(N))
-
-// describe('isPrime module', function() {
-//
-// })
