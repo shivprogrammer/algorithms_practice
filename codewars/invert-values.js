@@ -3,6 +3,8 @@
 const expect = require('chai').expect;
 
 /*
+8 kyu
+
 Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
 
 Python/JS/PHP/Java:
@@ -26,6 +28,9 @@ function invert(array) {
    }
   return result;
 }
+
+// Time complexity: O(N)
+// Space Complexity: O(N)
 
 describe('Invert Values Code Wars', function() {
   describe('Input: [1,2,3,4,5]', function() {
