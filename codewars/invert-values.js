@@ -58,3 +58,38 @@ describe('Invert Values Code Wars', function() {
     })
   })
 })
+
+function invert2(array) {
+  return array.map(x => x === 0 ? x: -x);
+}
+
+// Time Complexity: O(N)
+// Space Complexity: O(N)
+// Solution is the same space and time, but just much sexier and cleaner. Far more DRY
+
+describe('Invert Values more efficient - using map - Code Wars', function() {
+  describe('Input: [1,2,3,4,5]', function() {
+    it('Expected: [-1,-2,-3,-4,-5]', done => {
+      expect(invert2([1,2,3,4,5])).to.deep.equal([-1,-2,-3,-4,-5]);
+      done();
+    })
+  })
+  describe('Input: [1,-2,3,-4,5]', function() {
+    it('Expected: [-1,2,-3,4,-5]', done => {
+      expect(invert2([1,-2,3,-4,5])).to.deep.equal([-1,2,-3,4,-5]);
+      done();
+    })
+  })
+  describe('Input: []', function() {
+    it('Expected: []', done => {
+      expect(invert2([])).to.deep.equal([]);
+      done();
+    })
+  })
+  describe('Input: [0]', function() {
+    it('Expected: [0]', done => {
+      expect(invert2([0])).to.deep.equal([0]);
+      done();
+    })
+  })
+})
