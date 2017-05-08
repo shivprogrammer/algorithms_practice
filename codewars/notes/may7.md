@@ -1,0 +1,1 @@
+Attempted to use mergeSort for the where is my parent question. Interesting note, mergeSort prioritizes upper case letters before it does lower case letters, it doesn't matter what the actual letter is.
