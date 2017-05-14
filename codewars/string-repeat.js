@@ -40,3 +40,8 @@ describe('String Repeat Code Wars', function() {
     })
   })
 })
+
+/*
+GODDDDDDDDDDDDDD YES I GOT THE UIB DROPDOWN TO WORK ON THE FIRST TRY EXACTLY HOW I THOUGHT IT WAS GOING TOOO!!!!!!!!
+Time - 2:08 AM May 14, 2017
+*/
