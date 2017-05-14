@@ -1,15 +1,42 @@
 'use strict';
 
+const expect = require('chai').expect;
+/*
 Write a function called repeatStr which repeats the given string string exactly n times.
 
 repeatStr(6, "I") // "IIIIII"
 repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"
+*/
 
 function repeatStr (n, s) {
-  return '';
+  var result = '';
+
+  for (let i = 0; i < n; i++) {
+    result += s;
+  }
+
+  return result;
 }
 
+describe('String Repeat Code Wars', function() {
+  describe('input: 3, "*"', function() {
+    it('expect: "***"', done => {
+      expect(repeatStr(3, "*")).to.equal("***");
+      done();
+    })
+  })
 
-Test.assertSimilar(repeatStr(3, "*"), "***");
-Test.assertSimilar(repeatStr(5, "#"), "#####");
-Test.assertSimilar(repeatStr(2, "ha "), "ha ha ");
+  describe('input: 5, "#"', function() {
+    it('expect: ', done => {
+      expect(repeatStr(5, "#")).to.equal();
+      done();
+    })
+  })
+
+  describe('input: 2, "ha "', function() {
+    it('expect: ', done => {
+      expect(repeatStr(2, "ha ")).to.equal();
+      done();
+    })
+  })
+})
