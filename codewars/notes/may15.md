@@ -6,3 +6,6 @@ Time - 12:12 AM
 
 Background img, join page cleanup, contact form cleanup
 Time - 3:20 PM
+
+Nav bar complete
+3:41 PM
