@@ -19,3 +19,6 @@ Time - 6:25 PM
 
 ABOUT PAGE DONE AND FACEBOOK ICON IS ALIGNED IN THE CENTER OF ALL PAGES
 Time - 7:57 PM
+
+ACCORDION MENU INSIDE OF THE COLLAPSABLE MENU!!! But background image broke and facebook image and link broke
+Time - 8:36 PM
