@@ -32,3 +32,4 @@ Time - 10:37 PM
 Tomorrow ->
 Fix the background image
 Add all relevant images to the carousel along with testimonials
+Add all curriculum stuff
