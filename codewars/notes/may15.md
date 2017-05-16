@@ -22,3 +22,6 @@ Time - 7:57 PM
 
 ACCORDION MENU INSIDE OF THE COLLAPSABLE MENU!!! But background image broke and facebook image and link broke
 Time - 8:36 PM
+
+TOOLTIPS ALL WORKING NOW!!
+Time - 8:47 PM
