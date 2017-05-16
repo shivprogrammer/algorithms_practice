@@ -25,3 +25,6 @@ Time - 8:36 PM
 
 TOOLTIPS ALL WORKING NOW!!
 Time - 8:47 PM
+
+Facebook img centered and working
+Time - 10:37 PM
