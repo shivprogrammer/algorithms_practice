@@ -28,3 +28,6 @@ Time - 8:47 PM
 
 Facebook img centered and working
 Time - 10:37 PM
+
+Tomorrow ->
+Fix the background image
