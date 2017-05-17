@@ -12,3 +12,6 @@ Time - 7:40 PM
 
 CAROUSEL IS F***KING DONE BABY
 Time - 8:05 PM
+
+Shown and client happy
+time - 8:30PM
