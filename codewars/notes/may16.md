@@ -6,3 +6,6 @@ Time - 7:07 PM
 
 Code Cleanup
 Time - 7:11 PM
+
+Some progress on the carousel
+Time - 7:40 PM
