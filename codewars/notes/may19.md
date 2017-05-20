@@ -12,4 +12,6 @@ You never rise to the level of your hopes, you fall to the level of your trainin
 
 Never stop, never settle.
 
-I will continue to fail. And with every failure, I grow. 
+I will continue to fail. And with every failure, I grow.
+
+And I will make myself the best person that I can be, so that I can make the world a better place.
