@@ -11,3 +11,5 @@ Every experience of my life has made me ready. And that is exactly why when it c
 You never rise to the level of your hopes, you fall to the level of your training
 
 Never stop, never settle.
+
+I will continue to fail. And with every failure, I grow. 
