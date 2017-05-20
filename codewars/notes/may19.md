@@ -21,3 +21,5 @@ THERE IS NOTHING ON THE OTHER SIDE OF FEAR. SO JUST GO.
 Gods in the form of humans. Meant to experience what we have created ourselves from a different perspective.
 
 CONSTANT PROGRESSION AND FLOW
+
+LIFE IS LIMITLESS
