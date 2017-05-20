@@ -24,4 +24,4 @@ CONSTANT PROGRESSION AND FLOW
 
 LIFE IS LIMITLESS
 
-There is an intersection point between happiness and success.
+There is an intersection point between happiness and success. We just have to find it.
