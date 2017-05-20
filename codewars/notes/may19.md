@@ -8,4 +8,4 @@ Every single thing happens for a reason, and all I have to do is find the reason
 
 Every experience of my life has made me ready. And that is exactly why when it comes to crunch time, I've trained so hard that I know exactly what to do.
 
-You never rise to the level of your hopes,
+You never rise to the level of your hopes, you fall to the level of your training
