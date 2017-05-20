@@ -23,3 +23,5 @@ Gods in the form of humans. Meant to experience what we have created ourselves f
 CONSTANT PROGRESSION AND FLOW
 
 LIFE IS LIMITLESS
+
+There is an intersection point between happiness and success.
