@@ -19,3 +19,5 @@ And I will make myself the best person that I can be, so that I can make the wor
 THERE IS NOTHING ON THE OTHER SIDE OF FEAR. SO JUST GO.
 
 Gods in the form of humans. Meant to experience what we have created ourselves from a different perspective.
+
+CONSTANT PROGRESSION AND FLOW
