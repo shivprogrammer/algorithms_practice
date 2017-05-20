@@ -7,3 +7,5 @@ Today is a prime example of that. And what happened? Ended up being a complete b
 Every single thing happens for a reason, and all I have to do is find the reasons within myself. Go out there, and work your ass off.
 
 Every experience of my life has made me ready. And that is exactly why when it comes to crunch time, I've trained so hard that I know exactly what to do.
+
+You never rise to the level of your hopes,
