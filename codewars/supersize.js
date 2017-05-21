@@ -62,9 +62,15 @@ describe('Supersize function Code Wars', function() {
       done();
     })
   })
+
+  describe('Input: 700000000001', function() {
+    it('Expect: 710000000000', done => {
+      expect(superSize(700000000001)).to.equal(710000000000);
+      done();
+    })
+  })
 })
 
-// Test.assertEquals(superSize(123456789),987654321)
 // Test.assertEquals(superSize(700000000001),710000000000)
 // Test.assertEquals(superSize(666666),666666)
 // Test.assertEquals(superSize(2),2)
