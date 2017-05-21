@@ -21,6 +21,13 @@ function superSize(num){
 }
 
 describe('Supersize function Code Wars', function() {
+  describe('Input: ', function() {
+    it('Expect: ', done => {
+      expect(superSize()).to.equal();
+      done();
+    })
+  })
+
   describe('Input: 69', function() {
     it('Expect: 96', done => {
       expect(superSize(69)).to.equal(96);
@@ -78,5 +85,4 @@ describe('Supersize function Code Wars', function() {
   })
 })
 
-// Test.assertEquals(superSize(666666),666666)
 // Test.assertEquals(superSize(2),2)
