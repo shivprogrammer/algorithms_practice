@@ -34,13 +34,13 @@ describe('Supersize function Code Wars', function() {
       done();
     })
   })
-  //
-  // describe('Input: ', function() {
-  //   it('Expect: ', done => {
-  //     expect(supersize()).to.equal.();
-  //     done();
-  //   })
-  // })
+
+  describe('Input: 2017', function() {
+    it('Expect: 7210', done => {
+      expect(supersize(2017)).to.equal.(7210);
+      done();
+    })
+  })
   //
   // describe('Input: ', function() {
   //   it('Expect: ', done => {
@@ -50,7 +50,6 @@ describe('Supersize function Code Wars', function() {
   // })
 })
 
-// Test.assertEquals(superSize(513),531)
 // Test.assertEquals(superSize(2017),7210)
 // Test.assertEquals(superSize(414),441)
 // Test.assertEquals(superSize(608719),987610)
