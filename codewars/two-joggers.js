@@ -20,6 +20,10 @@ nbrOfLaps(4, 6); // returns [3, 2]
 */
 
 function nbrOfLaps(x, y) {
+  if (x === y) {
+    return [1, 1];
+  }
+
   var xy = x * y
   var output = [];
 
