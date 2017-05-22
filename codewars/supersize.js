@@ -11,13 +11,19 @@ const expect = require('chai').expect;
 
 function superSize(num){
   var result = [];
-  while (num > 0) {
-    result.push(num);
-    console.log(num % 10);
-    num = num / 10;
+  var output = '';
+
+  while (num > 1) {
+    result.push(num % 10);
+    num = Math.floor(num / 10);
+    console.log(result);
   }
 
-  return result.toString();
+  var sorted = result.sort();
+  for (let i = sorted.length - 1; i >= 0; i--) {
+    output += sorted[i];
+  }
+  return parseInt(output);
 }
 
 describe('Supersize function Code Wars', function() {
