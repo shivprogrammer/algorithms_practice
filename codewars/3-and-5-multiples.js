@@ -29,7 +29,10 @@ function solution(number) {
     return multiplesArray.indexOf(item) == index;
   })
 
-  return uniqueArray.reduce((prev, curr) => prev + curr);
+return uniqueArray.reduce(
+  (acc, currentVal, currentIndex, array) => {
+    return acc + currentVal;
+  }, 0)
 }
 
 // Time Complexity: O(N) + O(N) + O(N) + O(N) => O(N)
