@@ -91,6 +91,11 @@ describe('Supersize function Code Wars', function() {
       done();
     })
   })
-})
 
-// Test.assertEquals(superSize(2),2)
+  describe('Input: 2', function() {
+    it('Expect: 2', done => {
+      expect(superSize(2)).to.equal(2);
+      done();
+    })
+  })
+})
