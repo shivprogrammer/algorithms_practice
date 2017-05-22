@@ -19,12 +19,14 @@ function superSize(num){
     console.log(result);
   }
 
-  var sorted = result.sort();
-  for (let i = sorted.length - 1; i >= 0; i--) {
-    output += sorted[i];
+  for (let i = result.length - 1; i >= 0; i--) {
+    output += result.sort()[i];
   }
   return parseInt(output);
 }
+
+// Time Complexity: O(N)
+// Space Complexity: O(N)
 
 describe('Supersize function Code Wars', function() {
   describe('Input: ', function() {
