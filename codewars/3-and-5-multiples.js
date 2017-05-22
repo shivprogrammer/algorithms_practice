@@ -14,7 +14,6 @@ function solution(number) {
   var multiplesArray = [];
   var num3 = 3;
   var num5 = 5;
-  var result = 0;
 
   for (let i = 0; i < threes; i++) {
     multiplesArray.push(num3);
@@ -26,8 +25,15 @@ function solution(number) {
     num5 += 5;
   }
 
-  return result;
+  var uniqueArray = multiplesArray.filter(function(item, index) {
+    return multiplesArray.indexOf(item) == index;
+  })
+
+  return uniqueArray.reduce((prev, curr) => prev + curr);
 }
+
+// Time Complexity: O(N) + O(N) + O(N) + O(N) => O(N)
+// Space Complexity: O(N) + O(N) => O(N)
 
 describe('Code Wars 3 and 5 multiples questions', function() {
   describe('With an input of 10', function() {
