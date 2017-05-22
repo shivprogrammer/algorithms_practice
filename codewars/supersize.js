@@ -13,7 +13,7 @@ function superSize(num){
   var result = [];
   var output = '';
 
-  while (num > 1) {
+  while (num >= 1) {
     result.push(num % 10);
     num = Math.floor(num / 10);
     console.log(result);
@@ -28,8 +28,8 @@ function superSize(num){
 
 describe('Supersize function Code Wars', function() {
   describe('Input: ', function() {
-    it('Expect: ', done => {
-      expect(superSize()).to.equal();
+    it('Expect: NaN', done => {
+      expect(superSize()).to.deep.equal(NaN);
       done();
     })
   })
