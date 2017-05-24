@@ -13,3 +13,12 @@ Graph.prototype.addEdge = function(node, edge) {
     this.nodes[node][edge] = true
   }
 }
+
+Graph.prototype.addNode = function(value) {
+  if (this.nodes[value] !== undefined) {
+    return 'there is already a node with value ${value}';
+  }
+  else {
+    this.nodes[value] = {}; // I'm uncertain as to why you would want to set this as an empty object
+  }
+}
