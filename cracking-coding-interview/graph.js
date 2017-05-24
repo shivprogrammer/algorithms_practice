@@ -35,3 +35,12 @@ Graph.prototype.findEdges = function(node) {
 Graph.prototype.hasNode = function(node) {
   return this.nodes[node] !== undefined;
 }
+
+Graph.prototype.removeEdge = function(node, edge) {
+  if (this.nodes[node] === undefined) {
+    return 'node does not exist';
+  }
+  else  {
+    delete this.nodes[node][edge];
+  }
+}
