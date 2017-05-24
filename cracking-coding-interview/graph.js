@@ -44,3 +44,17 @@ Graph.prototype.removeEdge = function(node, edge) {
     delete this.nodes[node][edge];
   }
 }
+
+Graph.prototype.removeNode = function(node) {
+  if (this.nodes[node] === undefined) {
+    return 'node does not exist';
+  }
+  else {
+    delete this.nodes[node];
+    for (var currNode in this.nodes) {
+      if (this.nodes[currNode][node] !== undefined) {
+        delete this.nodes[currNode][node]; // something to do with deleting neighboring nodes, still not fully understanding though
+      }
+    }
+  }
+}
