@@ -1,0 +1,6 @@
+'use strict';
+
+function LinkedList(value) {
+  this.value = value;
+  this.next = null;
+}

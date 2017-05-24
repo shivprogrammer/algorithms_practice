@@ -58,3 +58,5 @@ Graph.prototype.removeNode = function(node) {
     }
   }
 }
+
+module.exports = Graph;
