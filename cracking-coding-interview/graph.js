@@ -31,3 +31,7 @@ Graph.prototype.findEdges = function(node) {
     return this.nodes[node];
   }
 }
+
+Graph.prototype.hasNode = function(node) {
+  return this.nodes[node] !== undefined;
+}
