@@ -22,3 +22,12 @@ Graph.prototype.addNode = function(value) {
     this.nodes[value] = {}; // I'm uncertain as to why you would want to set this as an empty object
   }
 }
+
+Graph.prototype.findEdges = function(node) {
+  if (this.nodes[node] === undefined) {
+    return 'node does not exist';
+  }
+  else {
+    return this.nodes[node];
+  }
+}
