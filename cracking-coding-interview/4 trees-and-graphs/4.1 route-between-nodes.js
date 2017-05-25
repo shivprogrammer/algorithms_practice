@@ -4,3 +4,8 @@
 
 var Graph = require('../Graph');
 var Queue = require('../Queue');
+
+function checkRoute(val1, val2, graph) {
+  var q1 = new Queue();
+  var q2 = new Queue();
+}
