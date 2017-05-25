@@ -5,10 +5,22 @@
 var Graph = require('../Graph');
 var Queue = require('../Queue');
 
-function checkRoute(val1, val2, graph) {
+function checkRoute(node1, node2, graph) {
   var q1 = new Queue();
   var q2 = new Queue();
   var visited1 = {};
   var visited2 = {};
-  visited
+  visited1[node1] = true;
+  visited2[node2] = true;
+  if (graph.hasNode(node1)) {
+    for (var edge in graph.findEdges(node1)) {
+      q1.add(edge);
+    }
+  }
+
+  if (graph.hasNode(node2)) {
+    for (var edge in graph.findEdges(node2)) {
+      q2.add(edge);
+    }
+  }
 }
