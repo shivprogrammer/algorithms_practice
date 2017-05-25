@@ -8,4 +8,7 @@ var Queue = require('../Queue');
 function checkRoute(val1, val2, graph) {
   var q1 = new Queue();
   var q2 = new Queue();
+  var visited1 = {};
+  var visited2 = {};
+  visited
 }
