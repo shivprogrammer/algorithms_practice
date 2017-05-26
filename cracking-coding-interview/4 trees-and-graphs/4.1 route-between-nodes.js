@@ -23,4 +23,15 @@ function checkRoute(node1, node2, graph) {
       q2.add(edge);
     }
   }
+
+  var nextEdge1;
+  var nextEdge2;
+  while (!q1.isEmpty() || !q2.isEmpty() {
+    if (q1.isEmpty()) {
+      nextEdge1 = q1.remove();
+      if (nextEdge1 === node2) {
+        return true;
+      }
+    }
+  })
 }
