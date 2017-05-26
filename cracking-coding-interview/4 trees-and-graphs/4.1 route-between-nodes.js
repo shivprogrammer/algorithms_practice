@@ -26,7 +26,7 @@ function checkRoute(node1, node2, graph) {
 
   var nextEdge1;
   var nextEdge2;
-  while (!q1.isEmpty() || !q2.isEmpty() {
+  while (!q1.isEmpty() || !q2.isEmpty()) {
     if (q1.isEmpty()) {
       nextEdge1 = q1.remove();
       if (nextEdge1 === node2) {
@@ -41,5 +41,23 @@ function checkRoute(node1, node2, graph) {
         }
       }
     }
-  })
+    if (!q2.isEmpty()) {
+      nextEdge2 = q2.remove();
+      if (nextEdge2 === ndoe1) {
+        return true;
+      }
+      if (visited2[nextEdge2] === undefined) {
+        visted2[nextEdge2] = true;
+        if (graph.hasNode(nextEdge2)) {
+          for (var edge in graph.findEdges(nextEdge2)) {
+            q2.add(edge);
+          }
+        }
+      }
+    }
+  }
+
+  return false;
 }
+
+var graph = new Graph();
