@@ -61,3 +61,14 @@ function checkRoute(node1, node2, graph) {
 }
 
 var graph = new Graph();
+graph.addNode('A');
+graph.addNode('B');
+graph.addNode('C');
+graph.addNode('D');
+graph.addNode('E');
+
+graph.addEdge('A', 'B');
+graph.addEdge('A', 'C');
+graph.addEdge('B', 'C');
+
+graph.addEdge('D', 'E');
