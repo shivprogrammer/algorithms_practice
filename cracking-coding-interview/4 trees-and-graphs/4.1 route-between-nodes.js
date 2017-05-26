@@ -32,6 +32,14 @@ function checkRoute(node1, node2, graph) {
       if (nextEdge1 === node2) {
         return true;
       }
+      if (visted1[nextEdge1] === undefined) {
+        visited1[nextEdge1] = true;
+        if(graph.hasNode(nextEdge1)) {
+          for (var edge in graph.findEdges(nextEdge1)) {
+            q1.add(edge);
+          }
+        }
+      }
     }
   })
 }
