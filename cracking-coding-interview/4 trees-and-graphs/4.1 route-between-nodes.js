@@ -1,5 +1,7 @@
 'use strict';
 
+const expect = require('chai').expect;
+
 // ROUTE BETWEEN NOTES -- Given a directed graph, design an algorithm to find out whether there is a route between two nodes.
 
 var Graph = require('../Graph');
@@ -72,3 +74,12 @@ graph.addEdge('A', 'C');
 graph.addEdge('B', 'C');
 
 graph.addEdge('D', 'E');
+
+describe('Cracking the Coding Intervew | Graphs | 4.1 | Route Between Nodes', function() {
+  describe('For Node A to C', function() {
+    it('should return true', done => {
+      expect(checkRoute('A', 'C', graph)).to.equal(true);
+      done();
+    })
+  })
+})
