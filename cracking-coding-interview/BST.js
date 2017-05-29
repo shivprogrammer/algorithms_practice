@@ -23,4 +23,12 @@ BST.prototype.insert = function(value) {
   }
 }
 
-BST.prototype.printLevelOrder
+BST.prototype.printLevelOrder = function() {
+  var level = [];
+  var q = new Queue();
+  var nextq = new Queue();
+  var currNode;
+
+  q.add(this);
+  while
+}
