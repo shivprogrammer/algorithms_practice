@@ -5,4 +5,4 @@ function LinkedList(value) {
   this.next = null;
 }
 
-module.exports = LinkedList
+module.exports = LinkedList;
