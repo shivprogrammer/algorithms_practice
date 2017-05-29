@@ -22,3 +22,5 @@ BST.prototype.insert = function(value) {
     }
   }
 }
+
+BST.prototype.printLevelOrder
