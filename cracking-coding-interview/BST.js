@@ -30,5 +30,8 @@ BST.prototype.printLevelOrder = function() {
   var currNode;
 
   q.add(this);
-  while
+  while (!q.isEmpty()) {
+    currNode = q.remove();
+    level.push(currNode.value);
+  }
 }
