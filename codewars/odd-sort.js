@@ -30,12 +30,12 @@ function sortArray(arr) {
   }
 
   for (let y = 0; y < arr.length; y++) {
-    if (arr[i] % 2 === 0) {
-      result.splice(i, 0, arr[i]);
+    if (arr[y] % 2 === 0) {
+      result.splice(y, 0, arr[y]);
     }
   }
 
-  return result;
+  return result.slice(0, arr.length);
 }
 
 describe('Odd Sort Code Wars', function() {
