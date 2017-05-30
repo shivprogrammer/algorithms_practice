@@ -38,6 +38,9 @@ function sortArray(arr) {
   return result.slice(0, arr.length);
 }
 
+//Time Complexity: O(N)
+// Space Complexity: O(N) + O(N)
+
 describe('Odd Sort Code Wars', function() {
   describe('Input: [5, 3, 2, 8, 1, 4]', function() {
     it('Should return: [1, 3, 2, 8, 5, 4]', done => {
