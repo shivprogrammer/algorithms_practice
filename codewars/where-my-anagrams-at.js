@@ -68,27 +68,12 @@ function compareMaps(map1, map2) {
       return false;
     }
   }
-
   return true;
 }
 
-// var o = {"k" : 2}
-//
-// var m1 = new Map();
-// m1.set("obj", o);
-// m1.set("str0", undefined);
-// m1.set("str1", 1);
-// m1.set("str2", 2);
-// m1.set("str3", 3);
-//
-// var m2 = new Map();
-// m2.set("str0", undefined);
-// m2.set("obj", o);
-// m2.set("str1", 1);
-// m2.set("str2", 2);
-// m2.set("str3", 3);
-//
-// console.log(compareMaps(m1, m2));
+// Time Complexity: O(X) [wordMap] + O(M * N) [Each Character in Words Array] + O(Y) [Key Comparison in Each Map] => O(M * N)
+// Space Complexity: O(N) [output] + O(M) [wordMap] + O(N) [anagramCheck] ||| Terrible Space Complexity, neds to be optimized.
+// Happy that I reached this solution, but this should definitely be optimized.
 
 describe('Where my Anagrams At? | Code Wars | 5kyu', function() {
   describe('with no anagrams', function() {
