@@ -22,6 +22,19 @@ anagrams('laser', ['lazing', 'lazy',  'lacer']) => []
 
 function anagrams(word, words) {
   var output = [];
+  var wordMap = new Map();
+  var anagramCheck = new Map();
+
+  for (let i = 0; i < word.length; i++) {
+    if (wordMap.get(word[i])) {
+      wordMap.set(word[i], wordMap.get(word[i]) + 1);
+    }
+    else {
+      wordMap.set(word[i], 1);
+    }
+  }
+
+  console.log(wordMap);
 }
 
 describe('Where my Anagrams At? | Code Wars | 5kyu', function() {
