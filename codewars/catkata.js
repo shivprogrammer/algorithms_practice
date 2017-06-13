@@ -1,5 +1,7 @@
 'use strict';
 
+const expect = require('chai').expect;
+
 /*
 In this, the first and simplest of a planned trilogy of cat katas :-), all you have to do is determine whether the distances between any visiting cats are large enough to make for a peaceful afternoon, or whether there is about to be an altercation someone will need to deal with by carrying one of them into the house or squirting them with water or what have you.
 As input your function will receive a list of strings representing the yard as a grid, and an integer representing the minimum distance needed to prevent problems (considering the cats' current states of sleepiness). A point with no cat in it will be represented by a "-" dash. Lou, Mustache Cat, and Raoul will be represented by an upper case L, M, and R respectively. At any particular time all three cats may be in the yard, or maybe two, one, or even none.
@@ -32,6 +34,31 @@ In this third example, Lou is at yard[0][11], Raoul is at yard[1][2], and Mustac
 */
 
 function peacefulYard(yard, minDistance) {
+  var catlocations = [];
+
+  for (let x = 0; x < yard.length; x++) {
+    for (let y = 0; y < yard[x].length; y++) {
+      if (yard[x][y] != '-') {
+        catlocations.push([x,y]);
+      }
+    }
+  }
+
+  if (catlocations.length < 2) {
+    return true;
+  }
+
+  if (catlocations.length === 2) {
+    var x = catlocations[1, 0] - catlocations[0, 0];
+    var y = catlocations[1, 1] - catlocations[0, 1];
+    var distance = Math.sqrt((x * x) + (y * y));
+
+    return distance > minDistance;
+  }
+
+  else {
+
+  }
 }
 
 describe('Cat Kata Code Wars', function() {
@@ -44,7 +71,7 @@ describe('Cat Kata Code Wars', function() {
 
   describe('2 cats within fighting distance', function() {
     it('should return false', done => {
-      expect(peacefulYard(peacefulYard(["------------", "---M--------", "------------", "------------", "-------R----", "------------"], 6)).to.equal(false);
+      expect(peacefulYard(["------------", "---M--------", "------------", "------------", "-------R----", "------------"], 6)).to.equal(false);
       done();
     })
   })
