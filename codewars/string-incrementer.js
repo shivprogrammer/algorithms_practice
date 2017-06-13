@@ -16,31 +16,44 @@ Attention: If the number has leading zeros the amount of digits should be consid
 */
 
 function incrementString (str) {
+  if (!str) {
+    return '1';
+  }
+
+  var number = '';
+  var letterBegin;
+
+  for (let i = str.length - 1; i > 0; i++) {
+    if (str[i].isNumber()) {
+      number = str[i] + number;
+    }
+
+    letterBegin = i;
+  }
+
+  console.log(number);
+  console.log(letterBegin);
 }
 
 describe('String Incrementer from Code Wars', function() {
   describe('base case with empty string', function() {
     it('should return 1', done => {
-      expect(incrementString('')).to.equal(1);
+      expect(incrementString('')).to.equal('1');
       done();
     })
   })
 
   describe('string with leading 0s', function() {
     it('should return foobar001', done => {
-      expect(incrementString(foobar000)).to.equal(foobar000);
+      expect(incrementString(foobar000)).to.equal('foobar000');
       done();
     })
   })
 
   describe('string with no numbers', function() {
     it('should return foo1', done => {
-      expect(incrementString(foo)).to.equal(foo1);
+      expect(incrementString(foo)).to.equal('foo1');
       done();
     })
   })
 })
-
-Test.assertEquals(incrementString("foobar001"), "foobar002");
-Test.assertEquals(incrementString("foobar99"), "foobar100");
-Test.assertEquals(incrementString("foobar099"), "foobar100");
