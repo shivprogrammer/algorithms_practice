@@ -68,7 +68,7 @@ function peacefulYard(yard, minDistance) {
 
     var xThird = catlocations[2][0] - catlocations[0][0];
     var yThird = catlocations[2][1] - catlocations[0][1];
-    var distance3 = Math.sqrt((xThird * xThird) + (yThird * yThird))
+    var distance3 = Math.sqrt((xThird * xThird) + (yThird * yThird));
 
     if (distance1 >= minDistance && distance2 >= minDistance && distance3 >= minDistance) {
       return true;
@@ -78,6 +78,9 @@ function peacefulYard(yard, minDistance) {
     }
   }
 }
+
+// Time Complexity: O(N * M);
+// Space Complexity: O(X)
 
 describe('Cat Kata Code Wars', function() {
   describe('with only one cat', function() {
