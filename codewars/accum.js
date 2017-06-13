@@ -8,9 +8,7 @@ Mumbling
 6 kyu
 
 This time no story, no theory. The examples below show you how to write function accum:
-
 Examples:
-
 accum("abcd");    // "A-Bb-Ccc-Dddd"
 accum("RqaEzty"); // "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
 accum("cwAt");    // "C-Ww-Aaa-Tttt"
@@ -18,7 +16,21 @@ The parameter of accum is a string which includes only letters from a..z and A..
 */
 
 function accum(s) {
-	// your code
+  var output = '';
+
+  for(let i = 0; i < s.length; i++) {
+    let acc = i;
+    output += s[i].toUpperCase();
+
+    while (acc > 0) {
+      output += s[i].toLowerCase();
+      acc--;
+    }
+
+    output += '-';
+  }
+
+  return output.substring(0, output.length - 1);
 }
 
 describe('Mumbling function from code wars', function() {
