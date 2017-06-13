@@ -5,7 +5,7 @@ const expect = require('chai').expect;
 /*
 Mumbling
 
-6 kyu
+7 kyu
 
 This time no story, no theory. The examples below show you how to write function accum:
 Examples:
