@@ -49,15 +49,29 @@ function peacefulYard(yard, minDistance) {
   }
 
   if (catlocations.length === 2) {
-    var x = catlocations[1, 0] - catlocations[0, 0];
-    var y = catlocations[1, 1] - catlocations[0, 1];
+    var x = Math.abs(catlocations[1][0] - catlocations[0][0]);
+    var y = Math.abs(catlocations[1][1] - catlocations[0][1]);
     var distance = Math.sqrt((x * x) + (y * y));
 
-    return distance > minDistance;
+    return distance >= minDistance;
   }
 
-  else {
+  if (catlocations.length === 3) {
 
+    var xFirst = Math.abs(catlocations[1][0] - catlocations[0][0]);
+    var yFirst = Math.abs(catlocations[1][1] - catlocations[0][1]);
+    var distance1 = Math.sqrt((xFirst * xFirst) + (yFirst * yFirst));
+
+    var xSecond = catlocations[2][0] - catlocations[1][0];
+    var ySecond = catlocations[2][1] - catlocations[1][1];
+    var distance2 = Math.sqrt((xSecond * xSecond) + (ySecond * ySecond));
+
+    if (distance1 >= minDistance && distance2 >= minDistance) {
+      return true;
+    }
+    else {
+      return false;
+    }
   }
 }
 
@@ -79,6 +93,13 @@ describe('Cat Kata Code Wars', function() {
   describe('2 cats within fighting distance', function() {
     it('should return false', done => {
       expect(peacefulYard(["------------", "---M--------", "------------", "------------", "-------R----", "------------"], 6)).to.equal(false);
+      done();
+    })
+  })
+
+  describe('3 cats on peaceful terms', function() {
+    it('should return true', done => {
+      expect(peacefulYard(["-----------L", "--R---------", "------------", "------------", "------------", "--M---------"], 4)).to.equal(true);
       done();
     })
   })
