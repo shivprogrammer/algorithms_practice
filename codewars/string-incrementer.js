@@ -17,9 +17,11 @@ Attention: If the number has leading zeros the amount of digits should be consid
 
 function incrementString (str) {
   var number = '';
-  var letterBegin;
   var newNumber;
-  var leadingZeros;
+  var letterBegin;
+  var stringWithoutZeros;
+  var numOfZeros;
+  var leadingZeros = '';
 
   if (!str) {
     return '1';
@@ -40,10 +42,18 @@ function incrementString (str) {
   }
   else {
     newNumber = parseInt(number) + 1;
+    newNumber.toString();
   }
 
-  console.log(newNumber);
-  console.log(str.slice(0, letterBegin + 1));
+  stringWithoutZeros = str.slice(0, letterBegin + 1) + newNumber;
+  numOfZeros = str.length - stringWithoutZeros.length;
+
+  while(numOfZeros > 0) {
+    leadingZeros += 0;
+    numOfZeros--;
+  }
+
+  return str.slice(0, letterBegin + 1) + leadingZeros + newNumber;
 }
 
 describe('String Incrementer from Code Wars', function() {
@@ -56,13 +66,13 @@ describe('String Incrementer from Code Wars', function() {
 
   describe('string with leading 0s', function() {
     it('should return foobar001', done => {
-      expect(incrementString('foobar000')).to.equal('foobar000');
+      expect(incrementString('foobar000')).to.equal('foobar001');
       done();
     })
   })
 
-  describe('string with leading 0s', function() {
-    it('should return foobar001', done => {
+  describe('input of foobar010', function() {
+    it('should return foobar011', done => {
       expect(incrementString('foobar010')).to.equal('foobar011');
       done();
     })
