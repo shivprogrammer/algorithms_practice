@@ -3,6 +3,10 @@
 const expect = require('chai').expect;
 
 /*
+String Incrementer
+
+5kyu
+
 Your job is to write a function which increments a string, to create a new string. If the string already ends with a number, the number should be incremented by 1. If the string does not end with a number the number 1 should be appended to the new string.
 
 Examples:
@@ -30,7 +34,7 @@ function incrementString (str) {
   }
 
   // find the number
-  for (let i = str.length - 1; i > 0; i--) {
+  for (let i = str.length - 1; i >= 0; i--) {
     if (!isNaN(str[i])) {
       number = str[i] + number;
     }
@@ -57,8 +61,16 @@ function incrementString (str) {
     numOfZeros--;
   }
 
+  // base case for number only input
+  if (!letterBegin) {
+    return leadingZeros + newNumber;
+  }
+
   return str.slice(0, letterBegin + 1) + leadingZeros + newNumber;
 }
+
+// Time Complexity: O(N) // AT THE VERY WORST CASE, ONLY IF NUMBERS. OTHERWISE TIME IS RELATED TO THE NUMBER OF NUMBERS AT THE END OF THE INPUT STRING SO HOLY GUACAMOLE THIS IS A GOOD TIME
+// Space Complexity: O(1)
 
 describe('String Incrementer from Code Wars', function() {
   describe('base case with empty string', function() {
@@ -99,6 +111,13 @@ describe('String Incrementer from Code Wars', function() {
   describe('string with no numbers', function() {
     it('should return foo1', done => {
       expect(incrementString('foo')).to.equal('foo1');
+      done();
+    })
+  })
+
+  describe('input of just a number', function() {
+    it('should return 2', done => {
+      expect(incrementString('1')).to.equal('2');
       done();
     })
   })
