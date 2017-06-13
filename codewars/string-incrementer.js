@@ -16,23 +16,34 @@ Attention: If the number has leading zeros the amount of digits should be consid
 */
 
 function incrementString (str) {
+  var number = '';
+  var letterBegin;
+  var newNumber;
+  var leadingZeros;
+
   if (!str) {
     return '1';
   }
 
-  var number = '';
-  var letterBegin;
-
-  for (let i = str.length - 1; i > 0; i++) {
-    if (str[i].isNumber()) {
-      number = str[i] + number;
+  for (let i = str.length - 1; i > 0; i--) {
+    if (!isNaN(str[i])) {
+      number += str[i];
     }
-
-    letterBegin = i;
+    else {
+      letterBegin = i;
+      break;
+    }
   }
 
-  console.log(number);
-  console.log(letterBegin);
+  if (letterBegin === str.length - 1) {
+    newNumber = 1;
+  }
+  else {
+    newNumber = parseInt(number) + 1;
+  }
+
+  console.log(newNumber);
+  console.log(str.slice(0, letterBegin + 1));
 }
 
 describe('String Incrementer from Code Wars', function() {
@@ -45,14 +56,21 @@ describe('String Incrementer from Code Wars', function() {
 
   describe('string with leading 0s', function() {
     it('should return foobar001', done => {
-      expect(incrementString(foobar000)).to.equal('foobar000');
+      expect(incrementString('foobar000')).to.equal('foobar000');
+      done();
+    })
+  })
+
+  describe('string with leading 0s', function() {
+    it('should return foobar001', done => {
+      expect(incrementString('foobar010')).to.equal('foobar011');
       done();
     })
   })
 
   describe('string with no numbers', function() {
     it('should return foo1', done => {
-      expect(incrementString(foo)).to.equal('foo1');
+      expect(incrementString('foo')).to.equal('foo1');
       done();
     })
   })
