@@ -16,6 +16,7 @@ Attention: If the number has leading zeros the amount of digits should be consid
 */
 
 function incrementString (str) {
+  // establishing variables
   var number = '';
   var newNumber;
   var letterBegin;
@@ -23,13 +24,15 @@ function incrementString (str) {
   var numOfZeros;
   var leadingZeros = '';
 
+  // base case
   if (!str) {
     return '1';
   }
 
+  // find the number
   for (let i = str.length - 1; i > 0; i--) {
     if (!isNaN(str[i])) {
-      number += str[i];
+      number = str[i] + number;
     }
     else {
       letterBegin = i;
@@ -37,6 +40,7 @@ function incrementString (str) {
     }
   }
 
+  // calculate the new number
   if (letterBegin === str.length - 1) {
     newNumber = 1;
   }
@@ -45,9 +49,9 @@ function incrementString (str) {
     newNumber.toString();
   }
 
+  // calculate how many leading zeroes to add
   stringWithoutZeros = str.slice(0, letterBegin + 1) + newNumber;
   numOfZeros = str.length - stringWithoutZeros.length;
-
   while(numOfZeros > 0) {
     leadingZeros += 0;
     numOfZeros--;
@@ -74,6 +78,20 @@ describe('String Incrementer from Code Wars', function() {
   describe('input of foobar010', function() {
     it('should return foobar011', done => {
       expect(incrementString('foobar010')).to.equal('foobar011');
+      done();
+    })
+  })
+
+  describe('input of foobar001', function() {
+    it('should return foobar002', done => {
+      expect(incrementString('foobar001')).to.equal('foobar002');
+      done();
+    })
+  })
+
+  describe('input of foobar099', function() {
+    it('should return foobar100', done => {
+      expect(incrementString('foobar099')).to.equal('foobar100');
       done();
     })
   })
