@@ -34,8 +34,61 @@ function anagrams(word, words) {
     }
   }
 
-  console.log(wordMap);
+  for (let x = 0; x < words.length; x++) {
+    for (let y = 0; y < words[x].length; y++) {
+      if (anagramCheck.get(words[x][y])) {
+        anagramCheck.set(words[x][y], anagramCheck.get(words[x][y]) + 1);
+      }
+      else {
+        anagramCheck.set(words[x][y], 1);
+      }
+    }
+
+    if (compareMaps(wordMap, anagramCheck)) {
+      output.push(words[x]);
+    }
+
+    anagramCheck.clear();
+  }
+
+  return output;
 }
+
+function compareMaps(map1, map2) {
+  var tempVal;
+
+  if (map1.size != map2.size) {
+    return false;
+  }
+
+  for (var [key, val] of map1) {
+    tempVal = map2.get(key);
+
+    if (tempVal != val || (!map2.has(key) && tempVal === undefined)) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+// var o = {"k" : 2}
+//
+// var m1 = new Map();
+// m1.set("obj", o);
+// m1.set("str0", undefined);
+// m1.set("str1", 1);
+// m1.set("str2", 2);
+// m1.set("str3", 3);
+//
+// var m2 = new Map();
+// m2.set("str0", undefined);
+// m2.set("obj", o);
+// m2.set("str1", 1);
+// m2.set("str2", 2);
+// m2.set("str3", 3);
+//
+// console.log(compareMaps(m1, m2));
 
 describe('Where my Anagrams At? | Code Wars | 5kyu', function() {
   describe('with no anagrams', function() {
