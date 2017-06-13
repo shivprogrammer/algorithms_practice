@@ -66,7 +66,11 @@ function peacefulYard(yard, minDistance) {
     var ySecond = catlocations[2][1] - catlocations[1][1];
     var distance2 = Math.sqrt((xSecond * xSecond) + (ySecond * ySecond));
 
-    if (distance1 >= minDistance && distance2 >= minDistance) {
+    var xThird = catlocations[2][0] - catlocations[0][0];
+    var yThird = catlocations[2][1] - catlocations[0][1];
+    var distance3 = Math.sqrt((xThird * xThird) + (yThird * yThird))
+
+    if (distance1 >= minDistance && distance2 >= minDistance && distance3 >= minDistance) {
       return true;
     }
     else {
