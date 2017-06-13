@@ -64,6 +64,13 @@ function peacefulYard(yard, minDistance) {
 describe('Cat Kata Code Wars', function() {
   describe('with only one cat', function() {
     it('should return true', done => {
+      expect(peacefulYard(["------------", "------------", "------------", "------------", "------------", "------------"], 10)).to.equal(true);
+      done();
+    })
+  })
+
+  describe('with only one cat', function() {
+    it('should return true', done => {
       expect(peacefulYard(["------------", "------------", "-L----------", "------------", "------------", "------------"], 10)).to.equal(true);
       done();
     })
