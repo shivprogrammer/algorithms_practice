@@ -28,11 +28,12 @@ digPow(46288, 3) should return 51 since 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688
 */
 
 function digPow(n, p) {
+  var nums = n.toString();
   var power = p;
   var powerOutput = 0;
 
-  for (let i = 0; i < n.length; i++) {
-    powerOutput += Math.pow(n[i], power);
+  for (let i = 0; i < nums.length; i++) {
+    powerOutput += Math.pow(parseInt(nums.charAt(i)), power);
     power++;
   }
 
@@ -43,6 +44,9 @@ function digPow(n, p) {
     return -1;
   }
 }
+
+// Time Complexity: O(N)
+// Space Complexity: O(1)
 
 describe('Playing with Digits | Code Wars | 6kyu', function() {
   describe('with input (89, 1)', function() {
