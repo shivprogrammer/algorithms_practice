@@ -3,7 +3,10 @@
 const expect = require('chai').expect;
 
 /*
+Sort the Odd
+
 6kyu
+
 You have an array of numbers.
 Your task is to sort ascending odd numbers but even numbers must be on their places.
 
@@ -15,32 +18,68 @@ sortArray([5, 3, 2, 8, 1, 4]) == [1, 3, 2, 8, 5, 4]
 */
 
 function sortArray(arr) {
-  var odds = [];
-  var result = [];
+  var oddsValues = [];
+  var output = [];
 
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] % 2 === 1) {
-      odds.push(arr[i]);
+      oddsValues.push(arr[i]);
+      output.push(false);
+    }
+
+    else {
+      output.push(arr[i]);
     }
   }
 
-  odds.sort();
+  oddsValues = mergeSort(oddsValues);
 
-  for (let x = 0; x < arr.length; x++) {
-    result.push(odds[x]);
-  }
-
-  for (let y = 0; y < arr.length; y++) {
-    if (arr[y] % 2 === 0) {
-      result.splice(y, 0, arr[y]);
+  for (let x = 0; x < output.length; x++) {
+    if (output[x] === false) {
+      output[x] = oddsValues[0];
+      oddsValues.shift();
     }
   }
 
-  return result.slice(0, arr.length);
+  return output;
 }
 
-//Time Complexity: O(N)
-// Space Complexity: O(N) + O(N)
+function mergeSort(arr) {
+  if (arr.length < 2) {
+    return arr;
+  }
+
+  var middle = parseInt(arr.length / 2);
+  var left = arr.slice(0, middle);
+  var right = arr.slice(middle, arr.length);
+
+  return merge(mergeSort(left), mergeSort(right));
+}
+
+function merge(left, right) {
+  var result = [];
+
+  while (left.length && right.length) {
+    if (left[0] <= right[0]) {
+      result.push(left.shift());
+    }
+    else {
+      result.push(right.shift());
+    }
+  }
+
+  while(left.length) {
+    result.push(left.shift());
+  }
+  while(right.length) {
+    result.push(right.shift());
+  }
+
+  return result;
+}
+
+// Time Complexity: O(N * log(N))
+// Space Complexity: O(N) [oddsValues] + O(N) [output] + O(N) [result from mergeSort]
 
 describe('Odd Sort Code Wars', function() {
   describe('Input: [5, 3, 2, 8, 1, 4]', function() {
